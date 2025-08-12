@@ -1,19 +1,16 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
-
-export const metadata = {
-  title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
-  description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
-  keywords: ["trädgårdsservice", "gräsklippning", "trädbeskärning", "stenläggning", "snöröjning", "Skåne"],
-  authors: [{ name: "Outdoor Ground Solutions AB" }],
-  openGraph: {
-    title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
-    description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
-    images: [{ url: "/logo.png" }],
-  },
-};
+import { useState } from 'react';
 
 export default function AboutPage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   const team = [
     {
       name: 'Erik Andersson',
@@ -101,45 +98,111 @@ export default function AboutPage() {
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/logo.png"
-                alt="Outdoor Ground Solutions AB Logo"
+                alt="Outdoor Ground Solutions AB"
                 width={40}
                 height={40}
-                className="mr-3"
+                className="w-10 h-10"
               />
-              <h1 className="text-2xl font-bold text-[#2D5A27] font-serif">
+              <span className="text-xl font-bold text-[#2D5A27]">
                 Outdoor Ground Solutions AB
-              </h1>
+              </span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/" className="text-gray-700 hover:text-[#2D5A27] transition-colors">
+                Hem
+              </Link>
+              <Link href="/tjanster" className="text-gray-700 hover:text-[#2D5A27] transition-colors">
+                Tjänster
+              </Link>
+              <Link href="/galleri" className="text-gray-700 hover:text-[#2D5A27] transition-colors">
+                Galleri
+              </Link>
+              <Link href="/om-oss" className="text-[#2D5A27] font-semibold">
+                Om oss
+              </Link>
+              <Link href="/kontakt" className="text-gray-700 hover:text-[#2D5A27] transition-colors">
+                Kontakt
+              </Link>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-gray-700 hover:text-[#2D5A27] px-3 py-2 rounded-md text-sm font-medium">
+
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden p-2 rounded-md text-gray-700 hover:text-[#2D5A27] focus:outline-none focus:ring-2 focus:ring-[#2D5A27]"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <Link
+                  href="/"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#2D5A27] hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Hem
                 </Link>
-                <Link href="/tjanster" className="text-gray-700 hover:text-[#2D5A27] px-3 py-2 rounded-md text-sm font-medium">
+                <Link
+                  href="/tjanster"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#2D5A27] hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Tjänster
                 </Link>
-                <Link href="/om-oss" className="text-[#2D5A27] hover:text-[#4A7C59] px-3 py-2 rounded-md text-sm font-medium">
-                  Om oss
-                </Link>
-                <Link href="/galleri" className="text-gray-700 hover:text-[#2D5A27] px-3 py-2 rounded-md text-sm font-medium">
+                <Link
+                  href="/galleri"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#2D5A27] hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Galleri
                 </Link>
-                <Link href="/kontakt" className="text-gray-700 hover:text-[#2D5A27] px-3 py-2 rounded-md text-sm font-medium">
+                <Link
+                  href="/om-oss"
+                  className="block px-3 py-2 text-base font-medium text-[#2D5A27] bg-[#F8FAF5] rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Om oss
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-[#2D5A27] hover:bg-gray-50 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   Kontakt
                 </Link>
               </div>
             </div>
-            <div className="md:hidden">
-              <button className="text-gray-700 hover:text-[#2D5A27]">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          )}
         </div>
       </nav>
 
