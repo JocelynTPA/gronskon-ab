@@ -278,7 +278,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/WhatsApp Image 2025-08-11 at 11.09.27 (1).jpeg"
+                  src="/images/outdoor.jpg"
                   alt="Professionell trädgårdsservice"
                   width={600}
                   height={400}

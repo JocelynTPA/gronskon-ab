@@ -18,6 +18,7 @@ export default function GalleryPage() {
       category: 'Trädgårdsdesign',
       description: 'Komplett trädgårdsdesign med stenläggning, plantering och belysning.',
       image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (1).jpeg',
+      image1:'/images/garden_after.jpg',
       location: 'Vellinge',
       features: ['Stenläggning', 'Plantering', 'Belysning', 'Design']
     },
@@ -26,7 +27,8 @@ export default function GalleryPage() {
       title: 'Stenläggning i Malmö',
       category: 'Stenläggning',
       description: 'Professionell stenläggning av uppfart och terrass.',
-      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (2).jpeg',
+      image: '/images/paving_before.jpg',
+      image1:'/images/paving_after.jpg',
       location: 'Malmö',
       features: ['Uppfart', 'Terrass', 'Drainage', 'Kvalitet']
     },
@@ -35,7 +37,8 @@ export default function GalleryPage() {
       title: 'Trädbeskärning i Höllviken',
       category: 'Trädbeskärning',
       description: 'Säker och skicklig beskärning av stora träd.',
-      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (3).jpeg',
+      image: '/images/pruning_before.jpg',
+      image1:'/images/pruning_after.jpg',
       location: 'Höllviken',
       features: ['Trädbeskärning', 'Säkerhet', 'Hälsa', 'Estetik']
     },
@@ -44,7 +47,8 @@ export default function GalleryPage() {
       title: 'Gräsklippning i Trelleborg',
       category: 'Gräsklippning',
       description: 'Regelbunden gräsklippning för välskött gräsmatta.',
-      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (4).jpeg',
+      image: '/images/lawn_before.jpg',
+      image1:'/images/lawn_after.jpg',
       location: 'Trelleborg',
       features: ['Gräsklippning', 'Underhåll', 'Kvalitet', 'Regelbunden']
     },
@@ -53,7 +57,8 @@ export default function GalleryPage() {
       title: 'Snöröjning i Skåne',
       category: 'Snöröjning',
       description: 'Pålitlig snöröjning under vintersäsongen.',
-      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (5).jpeg',
+      image: '/images/snow_before.jpg',  
+      image1:'/images/snow_after.jpg',
       location: 'Skåne',
       features: ['Snöröjning', 'Saltning', '24/7', 'Säkerhet']
     },
@@ -62,7 +67,8 @@ export default function GalleryPage() {
       title: 'Komplett trädgårdsrenovering',
       category: 'Trädgårdsdesign',
       description: 'Total renovering av trädgård med ny design och plantering.',
-      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (6).jpeg',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (1).jpeg',
+      image1:'/images/total_garden_after.jpg',
       location: 'Vellinge',
       features: ['Renovering', 'Design', 'Plantering', 'Komplett']
     }
@@ -235,7 +241,7 @@ export default function GalleryPage() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={project.image}
+                        src={project.image1}
                         alt={`Efter - ${project.title}`}
                         width={300}
                         height={200}

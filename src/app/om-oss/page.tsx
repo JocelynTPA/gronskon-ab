@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
+
 export default function AboutPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -238,7 +239,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/WhatsApp Image 2025-08-11 at 11.09.27.jpeg"
+                src="/images/about.jpg"
                 alt="Outdoor Ground Solutions AB team"
                 width={600}
                 height={400}
