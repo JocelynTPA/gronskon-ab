@@ -9,8 +9,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Outdoor Ground Solutions AB Logo"
+                width={40}
+                height={40}
+                className="mr-3"
+              />
               <h1 className="text-2xl font-bold text-[#2D5A27] font-serif">
-                GrönSkön AB
+                Outdoor Ground Solutions AB
               </h1>
             </div>
             <div className="hidden md:block">
@@ -173,10 +180,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#2D5A27] mb-6 font-serif">
-                Om GrönSkön AB
+                Om Outdoor Ground Solutions AB
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Vi är ett lokalt företag med djup kunskap om trädgårdar i Skåne. Med över 10 års erfarenhet hjälper vi dig att skapa och underhålla vackra utemiljöer.
+                Outdoor Ground Solutions AB grundades 2014 av Erik Andersson, en passionerad trädgårdsmästare med visionen att skapa vackra och hållbara trädgårdar i Skåne. Från enmansföretag har vi vuxit till ett team av erfarna professionella som delar samma passion för kvalitet och kundnöjdhet.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Vårt team av erfarna trädgårdsmästare är passionerade för att leverera högkvalitativ service. Vi förstår att varje trädgård är unik och anpassar våra lösningar efter dina specifika behov.
@@ -195,7 +202,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src="/images/WhatsApp Image 2025-08-11 at 11.09.27 (1).jpeg"
                   alt="Professionell trädgårdsservice"
                   width={600}
                   height={400}
@@ -246,10 +253,10 @@ export default function HomePage() {
               Kontakta oss
             </Link>
             <a 
-              href="tel:+46701234567" 
+              href="tel:+46739390497" 
               className="border-2 border-white text-white hover:bg-white hover:text-[#2D5A27] font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
-              Ring oss: 070-123 45 67
+              Ring oss: 073-939 04 97
             </a>
           </div>
         </div>
@@ -260,7 +267,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">GrönSkön AB</h3>
+              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">Outdoor Ground Solutions AB</h3>
               <p className="text-gray-300">
                 Professionell trädgårdsservice i Skåne. Vi skapar vackra utemiljöer för dig och din familj.
               </p>
@@ -287,14 +294,16 @@ export default function HomePage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
               <div className="space-y-2 text-gray-300">
-                <p>070-123 45 67</p>
-                <p>info@gronskon.se</p>
-                <p>Org.nr: 556789-1234</p>
+                <p>073-939 04 97</p>
+                <p>david@outdoorgroundsolutions.se</p>
+                <p>Org.nr: 559522-6225</p>
+                <p>Kantatgatan 19 Lgh 1002</p>
+                <p>215 70 Malmö</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 GrönSkön AB. Alla rättigheter förbehållna.</p>
+            <p>&copy; 2024 Outdoor Ground Solutions AB. Alla rättigheter förbehållna.</p>
           </div>
         </div>
       </footer>

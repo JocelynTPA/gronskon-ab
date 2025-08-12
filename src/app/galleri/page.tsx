@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Galleri - GrönSkön AB | Se våra slutförda trädgårdsprojekt',
+  title: 'Galleri - Outdoor Ground Solutions AB | Se våra slutförda trädgårdsprojekt',
   description: 'Utforska vårt galleri med slutförda trädgårdsprojekt i Skåne. Se transformationer från gräsklippning till komplett trädgårdsdesign.',
 };
 
@@ -10,63 +10,57 @@ export default function GalleryPage() {
   const projects = [
     {
       id: 1,
-      title: 'Modern trädgård i Vellinge',
-      description: 'Komplett trädgårdsrenovering med stenläggning, plantering och belysning. En modern oas för familjen att njuta av.',
+      title: 'Modern villa i Vellinge',
       category: 'Trädgårdsdesign',
+      description: 'Komplett trädgårdsdesign med stenläggning, plantering och belysning.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (1).jpeg',
       location: 'Vellinge',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Stenläggning', 'Plantering', 'Belysning', 'Vattensystem']
+      features: ['Stenläggning', 'Plantering', 'Belysning', 'Design']
     },
     {
       id: 2,
       title: 'Stenläggning i Malmö',
-      description: 'Professionell stenläggning av uppfart och gångar. Hållbart och vackert material som varar i generationer.',
       category: 'Stenläggning',
+      description: 'Professionell stenläggning av uppfart och terrass.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (2).jpeg',
       location: 'Malmö',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Uppfart', 'Gångar', 'Drainage', 'Kantsten']
+      features: ['Uppfart', 'Terrass', 'Drainage', 'Kvalitet']
     },
     {
       id: 3,
       title: 'Trädbeskärning i Höllviken',
-      description: 'Säker och skicklig beskärning av stora träd för optimal hälsa och säkerhet. Resultatet blev en vacker och välskött trädgård.',
       category: 'Trädbeskärning',
+      description: 'Säker och skicklig beskärning av stora träd.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (3).jpeg',
       location: 'Höllviken',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Säkerhetsbeskärning', 'Formbeskärning', 'Hälsokontroll', 'Stubbfräsning']
+      features: ['Trädbeskärning', 'Säkerhet', 'Hälsa', 'Estetik']
     },
     {
       id: 4,
-      title: 'Årligt underhåll i Trelleborg',
-      description: 'Regelbunden gräsklippning och trädgårdsunderhåll för en perfekt trädgård året runt. Kundnöjdhet garanterad.',
-      category: 'Underhåll',
+      title: 'Gräsklippning i Trelleborg',
+      category: 'Gräsklippning',
+      description: 'Regelbunden gräsklippning för välskött gräsmatta.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (4).jpeg',
       location: 'Trelleborg',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Gräsklippning', 'Trädbeskärning', 'Plantering', 'Kvalitetskontroll']
+      features: ['Gräsklippning', 'Underhåll', 'Kvalitet', 'Regelbunden']
     },
     {
       id: 5,
-      title: 'Terrassbyggnation i Vellinge',
-      description: 'Stor terrass med högkvalitativ trä och professionell byggnation. Perfekt för sommarkvällar och underhållning.',
-      category: 'Stenläggning',
-      location: 'Vellinge',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Terrass', 'Belysning', 'Räcke', 'Trappor']
+      title: 'Snöröjning i Skåne',
+      category: 'Snöröjning',
+      description: 'Pålitlig snöröjning under vintersäsongen.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (5).jpeg',
+      location: 'Skåne',
+      features: ['Snöröjning', 'Saltning', '24/7', 'Säkerhet']
     },
     {
       id: 6,
-      title: 'Snöröjning i Malmö',
-      description: 'Pålitlig snöröjning under vintersäsongen. Vi håller gångar och uppfarter rena och säkra även under snöstormar.',
-      category: 'Snöröjning',
-      location: 'Malmö',
-      beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      afterImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      features: ['Snöröjning', 'Saltning', '24/7 service', 'Säkerhet']
+      title: 'Komplett trädgårdsrenovering',
+      category: 'Trädgårdsdesign',
+      description: 'Total renovering av trädgård med ny design och plantering.',
+      image: '/images/WhatsApp Image 2025-08-11 at 11.09.28 (6).jpeg',
+      location: 'Vellinge',
+      features: ['Renovering', 'Design', 'Plantering', 'Komplett']
     }
   ];
 
@@ -79,9 +73,16 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-[#2D5A27] font-serif">
-                GrönSkön AB
-              </Link>
+              <Image
+                src="/logo.png"
+                alt="Outdoor Ground Solutions AB Logo"
+                width={40}
+                height={40}
+                className="mr-3"
+              />
+              <h1 className="text-2xl font-bold text-[#2D5A27] font-serif">
+                Outdoor Ground Solutions AB
+              </h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -152,7 +153,7 @@ export default function GalleryPage() {
                   <div className="grid grid-cols-2 gap-1">
                     <div className="relative">
                       <Image
-                        src={project.beforeImage}
+                        src={project.image}
                         alt={`Före - ${project.title}`}
                         width={300}
                         height={200}
@@ -164,7 +165,7 @@ export default function GalleryPage() {
                     </div>
                     <div className="relative">
                       <Image
-                        src={project.afterImage}
+                        src={project.image}
                         alt={`Efter - ${project.title}`}
                         width={300}
                         height={200}
@@ -249,7 +250,7 @@ export default function GalleryPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4 italic">
-                "Fantastiskt arbete med vår stenläggning! Resultatet översteg alla förväntningar. Mycket professionellt team."
+                &ldquo;Fantastiskt arbete med vår stenläggning! Resultatet översteg alla förväntningar. Mycket professionellt team.&rdquo;
               </p>
               <div>
                 <p className="font-semibold text-[#2D5A27]">Anna och Lars</p>
@@ -266,7 +267,7 @@ export default function GalleryPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4 italic">
-                "GrönSkön AB har förvandlat vår trädgård till en verklig oas. Högsta kvalitet och pålitlig service."
+                &ldquo;GrönSkön AB har förvandlat vår trädgård till en verklig oas. Högsta kvalitet och pålitlig service.&rdquo;
               </p>
               <div>
                 <p className="font-semibold text-[#2D5A27]">Karin Bergström</p>
@@ -283,7 +284,7 @@ export default function GalleryPage() {
                 ))}
               </div>
               <p className="text-gray-600 mb-4 italic">
-                "Bästa investeringen vi gjort! Vår trädgård ser fantastisk ut året runt tack vare deras underhåll."
+                &ldquo;Bästa investeringen vi gjort! Vår trädgård ser fantastisk ut året runt tack vare deras underhåll.&rdquo;
               </p>
               <div>
                 <p className="font-semibold text-[#2D5A27]">Per och Eva</p>
@@ -298,23 +299,23 @@ export default function GalleryPage() {
       <section className="py-16 bg-[#2D5A27] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-            Vill du ha en liknande transformation?
+            Redo att förvandla din trädgård?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa dig att skapa trädgården av dina drömmar.
+            Kontakta oss idag för ett kostnadsfritt besök och offert. Vi hjälper dig att skapa trädgården av dina drömmar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/kontakt" 
               className="bg-[#7FB069] hover:bg-[#6A9A5A] text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
-              Få kostnadsfritt offert
+              Kontakta oss
             </Link>
             <a 
-              href="tel:+46701234567" 
+              href="tel:+46739390497" 
               className="border-2 border-white text-white hover:bg-white hover:text-[#2D5A27] font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
-              Ring oss: 070-123 45 67
+              Ring oss: 073-939 04 97
             </a>
           </div>
         </div>
@@ -325,7 +326,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">GrönSkön AB</h3>
+              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">Outdoor Ground Solutions AB</h3>
               <p className="text-gray-300">
                 Professionell trädgårdsservice i Skåne. Vi skapar vackra utemiljöer för dig och din familj.
               </p>
@@ -352,14 +353,16 @@ export default function GalleryPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
               <div className="space-y-2 text-gray-300">
-                <p>070-123 45 67</p>
-                <p>info@gronskon.se</p>
-                <p>Org.nr: 556789-1234</p>
+                <p>073-939 04 97</p>
+                <p>david@outdoorgroundsolutions.se</p>
+                <p>Org.nr: 559522-6225</p>
+                <p>Kantatgatan 19 Lgh 1002</p>
+                <p>215 70 Malmö</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 GrönSkön AB. Alla rättigheter förbehållna.</p>
+            <p>&copy; 2024 Outdoor Ground Solutions AB. Alla rättigheter förbehållna.</p>
           </div>
         </div>
       </footer>

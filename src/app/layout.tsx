@@ -15,12 +15,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "GrönSkön AB - Professionell trädgårdsservice i Skåne",
-  description: "GrönSkön AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
-  keywords: "trädgårdsservice, gräsklippning, trädbeskärning, stenläggning, snöröjning, trädgårdsdesign, Skåne, Vellinge, Malmö, Höllviken, Trelleborg",
-  authors: [{ name: "GrönSkön AB" }],
+  title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
+  description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
+  keywords: ["trädgårdsservice", "gräsklippning", "trädbeskärning", "stenläggning", "snöröjning", "Skåne"],
+  authors: [{ name: "Outdoor Ground Solutions AB" }],
   openGraph: {
-    title: "GrönSkön AB - Professionell trädgårdsservice i Skåne",
+    title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
     description: "Professionell trädgårdsservice för ditt hem i Skåne. Gräsklippning, trädbeskärning, stenläggning och mer.",
     type: "website",
     locale: "sv_SE",

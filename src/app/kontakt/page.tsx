@@ -1,11 +1,21 @@
+import Image from "next/image";
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Kontakt - GrönSkön AB | Få kostnadsfritt offert för trädgårdsservice',
-  description: 'Kontakta GrönSkön AB för kostnadsfritt offert på trädgårdsservice i Vellinge, Malmö, Höllviken och Trelleborg. Vi svarar snabbt på alla förfrågningar.',
+  title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
+  description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
+  keywords: ["trädgårdsservice", "gräsklippning", "trädbeskärning", "stenläggning", "snöröjning", "Skåne"],
+  authors: [{ name: "Outdoor Ground Solutions AB" }],
+  openGraph: {
+    title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
+    description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
+    keywords: ["trädgårdsservice", "gräsklippning", "trädbeskärning", "stenläggning", "snöröjning", "Skåne"],
+    authors: [{ name: "Outdoor Ground Solutions AB" }],
+    images: [{ url: "/logo.png" }],
+  },
 };
 
-export default function ContactPage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -13,9 +23,16 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-[#2D5A27] font-serif">
-                GrönSkön AB
-              </Link>
+              <Image
+                src="/logo.png"
+                alt="Outdoor Ground Solutions AB Logo"
+                width={40}
+                height={40}
+                className="mr-3"
+              />
+              <h1 className="text-2xl font-bold text-[#2D5A27] font-serif">
+                Outdoor Ground Solutions AB
+              </h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -126,7 +143,7 @@ export default function ContactPage() {
                     name="phone"
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#7FB069] focus:border-transparent"
-                    placeholder="070-123 45 67"
+                    placeholder="073-939 04 97"
                   />
                 </div>
                 
@@ -193,76 +210,76 @@ export default function ContactPage() {
                 Kontaktinformation
               </h2>
               
-              <div className="space-y-8">
-                {/* Phone & Email */}
-                <div className="bg-[#F8FAF5] rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-[#2D5A27] mb-4">Ring eller maila oss</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 text-[#7FB069] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      <a href="tel:+46701234567" className="text-gray-700 hover:text-[#2D5A27]">
-                        070-123 45 67
-                      </a>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-5 h-5 text-[#7FB069] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <a href="mailto:info@gronskon.se" className="text-gray-700 hover:text-[#2D5A27]">
-                        info@gronskon.se
-                      </a>
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-[#7FB069] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#2D5A27]">Telefon</h3>
+                    <a href="tel:+46739390497" className="text-gray-700 hover:text-[#2D5A27]">
+                      073-939 04 97
+                    </a>
                   </div>
                 </div>
 
-                {/* Business Hours */}
-                <div className="bg-[#F8FAF5] rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-[#2D5A27] mb-4">Öppettider</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Måndag - Fredag</span>
-                      <span className="font-medium">07:00 - 17:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Lördag</span>
-                      <span className="font-medium">08:00 - 15:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Söndag</span>
-                      <span className="font-medium">Stängt</span>
-                    </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-[#7FB069] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <p className="text-sm text-gray-600 mt-3">
-                    * Akut service tillgänglig utanför öppettider
-                  </p>
-                </div>
-
-                {/* Service Areas */}
-                <div className="bg-[#F8FAF5] rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-[#2D5A27] mb-4">Vi betjänar</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {['Vellinge', 'Malmö', 'Höllviken', 'Trelleborg'].map((city) => (
-                      <div key={city} className="flex items-center">
-                        <svg className="w-4 h-4 text-[#7FB069] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-700">{city}</span>
-                      </div>
-                    ))}
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#2D5A27]">E-post</h3>
+                    <a href="mailto:david@outdoorgroundsolutions.se" className="text-gray-700 hover:text-[#2D5A27]">
+                      david@outdoorgroundsolutions.se
+                    </a>
                   </div>
                 </div>
 
-                {/* Company Info */}
-                <div className="bg-[#F8FAF5] rounded-lg p-6">
-                  <h3 className="text-xl font-semibold text-[#2D5A27] mb-4">Företagsinformation</h3>
-                  <div className="space-y-2 text-gray-700">
-                    <p><strong>Organisationsnummer:</strong> 556789-1234</p>
-                    <p><strong>Momsregistrerat:</strong> Ja</p>
-                    <p><strong>Försäkrad:</strong> Ja</p>
-                    <p><strong>Certifieringar:</strong> Trädgårdsmästare</p>
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-[#7FB069] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#2D5A27]">Adress</h3>
+                    <p className="text-gray-700">
+                      Kantatgatan 19 Lgh 1002<br />
+                      215 70 Malmö
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 bg-[#7FB069] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#2D5A27]">Öppettider</h3>
+                    <p className="text-gray-700">
+                      Måndag - Fredag: 07:00 - 17:00<br />
+                      Lördag: 08:00 - 15:00<br />
+                      Söndag: Stängt
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-[#F8FAF5] rounded-lg">
+                <h3 className="text-xl font-semibold text-[#2D5A27] mb-4">Företagsinformation</h3>
+                <div className="space-y-2 text-gray-700">
+                  <p><strong>Företagsnamn:</strong> Outdoor Ground Solutions AB</p>
+                  <p><strong>Organisationsnummer:</strong> 559522-6225</p>
+                  <p><strong>Adress:</strong> Kantatgatan 19 Lgh 1002, 215 70 Malmö</p>
+                  <p><strong>Telefon:</strong> 073-939 04 97</p>
+                  <p><strong>E-post:</strong> david@outdoorgroundsolutions.se</p>
                 </div>
               </div>
             </div>
@@ -357,20 +374,20 @@ export default function ContactPage() {
       <section className="py-16 bg-[#2D5A27] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-            Redo att komma igång?
+            Redo att förvandla din trädgård?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa dig att skapa trädgården av dina drömmar.
+            Kontakta oss idag för ett kostnadsfritt besök och offert. Vi hjälper dig att skapa trädgården av dina drömmar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:+46701234567" 
+              href="tel:+46739390497" 
               className="bg-[#7FB069] hover:bg-[#6A9A5A] text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
-              Ring oss nu: 070-123 45 67
+              Ring oss nu: 073-939 04 97
             </a>
             <a 
-              href="mailto:info@gronskon.se" 
+              href="mailto:david@outdoorgroundsolutions.se"
               className="border-2 border-white text-white hover:bg-white hover:text-[#2D5A27] font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
               Skicka e-post
@@ -384,7 +401,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">GrönSkön AB</h3>
+              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">Outdoor Ground Solutions AB</h3>
               <p className="text-gray-300">
                 Professionell trädgårdsservice i Skåne. Vi skapar vackra utemiljöer för dig och din familj.
               </p>
@@ -411,14 +428,16 @@ export default function ContactPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
               <div className="space-y-2 text-gray-300">
-                <p>070-123 45 67</p>
-                <p>info@gronskon.se</p>
-                <p>Org.nr: 556789-1234</p>
+                <p>073-939 04 97</p>
+                <p>david@outdoorgroundsolutions.se</p>
+                <p>Org.nr: 559522-6225</p>
+                <p>Kantatgatan 19 Lgh 1002</p>
+                <p>215 70 Malmö</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 GrönSkön AB. Alla rättigheter förbehållna.</p>
+            <p>&copy; 2024 Outdoor Ground Solutions AB. Alla rättigheter förbehållna.</p>
           </div>
         </div>
       </footer>

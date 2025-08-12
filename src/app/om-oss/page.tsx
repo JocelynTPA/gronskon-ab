@@ -2,8 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Om oss - GrönSkön AB | Vårt team och våra värderingar',
-  description: 'Läs mer om GrönSkön AB, vårt erfarna team och våra värderingar. Vi är passionerade för att skapa vackra trädgårdar i Skåne.',
+  title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
+  description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
+  keywords: ["trädgårdsservice", "gräsklippning", "trädbeskärning", "stenläggning", "snöröjning", "Skåne"],
+  authors: [{ name: "Outdoor Ground Solutions AB" }],
+  openGraph: {
+    title: "Outdoor Ground Solutions AB - Professionell trädgårdsservice i Skåne",
+    description: "Outdoor Ground Solutions AB erbjuder professionell gräsklippning, trädbeskärning, stenläggning, snöröjning och trädgårdsdesign i Vellinge, Malmö, Höllviken och Trelleborg.",
+    images: [{ url: "/logo.png" }],
+  },
 };
 
 export default function AboutPage() {
@@ -71,7 +78,7 @@ export default function AboutPage() {
     {
       name: 'Anna och Lars Johansson',
       location: 'Vellinge',
-      text: 'GrönSkön AB har förvandlat vår trädgård till en verklig oas. Erik och hans team är professionella, pålitliga och verkligen kunniga. Vi rekommenderar dem varmt!',
+      text: 'Outdoor Ground Solutions AB har förvandlat vår trädgård till en verklig oas. Erik och hans team är professionella, pålitliga och verkligen kunniga. Vi rekommenderar dem varmt!',
       rating: 5
     },
     {
@@ -83,7 +90,7 @@ export default function AboutPage() {
     {
       name: 'Per och Eva Nilsson',
       location: 'Höllviken',
-      text: 'Vi har använt GrönSkön AB för årligt underhåll i tre år nu. De är alltid pålitliga och vår trädgård ser fantastisk ut året runt. Bästa investeringen vi gjort!',
+      text: 'Vi har använt Outdoor Ground Solutions AB för årligt underhåll i tre år nu. De är alltid pålitliga och vår trädgård ser fantastisk ut året runt. Bästa investeringen vi gjort!',
       rating: 5
     }
   ];
@@ -95,9 +102,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-[#2D5A27] font-serif">
-                GrönSkön AB
-              </Link>
+              <Image
+                src="/logo.png"
+                alt="Outdoor Ground Solutions AB Logo"
+                width={40}
+                height={40}
+                className="mr-3"
+              />
+              <h1 className="text-2xl font-bold text-[#2D5A27] font-serif">
+                Outdoor Ground Solutions AB
+              </h1>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -133,7 +147,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-[#2D5A27] to-[#4A7C59] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-            Om GrönSkön AB
+            Om Outdoor Ground Solutions AB
           </h1>
           <p className="text-xl max-w-3xl mx-auto">
             Vi är passionerade för att skapa vackra och hållbara trädgårdar i Skåne. Läs mer om vårt team, våra värderingar och vår historia.
@@ -150,7 +164,7 @@ export default function AboutPage() {
                 Vår historia
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                GrönSkön AB grundades 2014 av Erik Andersson, en passionerad trädgårdsmästare med visionen att skapa vackra och hållbara trädgårdar i Skåne. Från enmansföretag har vi vuxit till ett team av erfarna professionella som delar samma passion för naturen och trädgårdskonst.
+                Outdoor Ground Solutions AB grundades 2014 av Erik Andersson, en passionerad trädgårdsmästare med visionen att skapa vackra och hållbara trädgårdar i Skåne. Från enmansföretag har vi vuxit till ett team av erfarna professionella som delar samma passion för kvalitet och kundnöjdhet.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Under åren har vi hjälpt hundratals familjer att förverkliga sina drömmar om den perfekta trädgården. Vi är stolta över att ha byggt upp ett rykte för kvalitet, pålitlighet och kundnöjdhet i hela Skåne.
@@ -161,8 +175,8 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="GrönSkön AB team"
+                src="/images/WhatsApp Image 2025-08-11 at 11.09.27.jpeg"
+                alt="Outdoor Ground Solutions AB team"
                 width={600}
                 height={400}
                 className="rounded-lg object-cover"
@@ -208,7 +222,7 @@ export default function AboutPage() {
               Vårt team
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Möt de erfarna professionella som gör GrönSkön AB till Skånes främsta trädgårdsföretag.
+              Möt de erfarna professionella som gör Outdoor Ground Solutions AB till Skånes främsta trädgårdsföretag.
             </p>
           </div>
           
@@ -279,7 +293,7 @@ export default function AboutPage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div>
                   <p className="font-semibold text-[#2D5A27]">{testimonial.name}</p>
                   <p className="text-gray-500 text-sm">{testimonial.location}</p>
@@ -294,10 +308,10 @@ export default function AboutPage() {
       <section className="py-16 bg-[#2D5A27] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-            Vill du bli vår nästa nöjda kund?
+            Redo att förvandla din trädgård?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa dig att skapa trädgården av dina drömmar.
+            Kontakta oss idag för ett kostnadsfritt besök och offert. Vi hjälper dig att skapa trädgården av dina drömmar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -307,10 +321,10 @@ export default function AboutPage() {
               Kontakta oss
             </Link>
             <a 
-              href="tel:+46701234567" 
+              href="tel:+46739390497" 
               className="border-2 border-white text-white hover:bg-white hover:text-[#2D5A27] font-semibold py-3 px-8 rounded-lg transition duration-300"
             >
-              Ring oss: 070-123 45 67
+              Ring oss: 073-939 04 97
             </a>
           </div>
         </div>
@@ -321,7 +335,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">GrönSkön AB</h3>
+              <h3 className="text-xl font-bold text-[#7FB069] mb-4 font-serif">Outdoor Ground Solutions AB</h3>
               <p className="text-gray-300">
                 Professionell trädgårdsservice i Skåne. Vi skapar vackra utemiljöer för dig och din familj.
               </p>
@@ -348,14 +362,16 @@ export default function AboutPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
               <div className="space-y-2 text-gray-300">
-                <p>070-123 45 67</p>
-                <p>info@gronskon.se</p>
-                <p>Org.nr: 556789-1234</p>
+                <p>073-939 04 97</p>
+                <p>david@outdoorgroundsolutions.se</p>
+                <p>Org.nr: 559522-6225</p>
+                <p>Kantatgatan 19 Lgh 1002</p>
+                <p>215 70 Malmö</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 GrönSkön AB. Alla rättigheter förbehållna.</p>
+            <p>&copy; 2024 Outdoor Ground Solutions AB. Alla rättigheter förbehållna.</p>
           </div>
         </div>
       </footer>
