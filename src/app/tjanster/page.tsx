@@ -139,7 +139,7 @@ export default function ServicesPage() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="/WhatsApp Image 2025-08-13 at 11.00.08.jpeg"
                 alt="Outdoor Ground Solutions AB"
                 width={40}
                 height={40}

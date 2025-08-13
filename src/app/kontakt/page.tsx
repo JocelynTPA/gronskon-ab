@@ -20,7 +20,7 @@ export default function ContactPage() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/logo.png"
+                src="/WhatsApp Image 2025-08-13 at 11.00.08.jpeg"
                 alt="Outdoor Ground Solutions AB"
                 width={40}
                 height={40}
@@ -359,13 +359,6 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Image
-                  src="/logo.png"
-                  alt="Outdoor Ground Solutions AB"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
-                />
                 <span className="text-xl font-bold">
                   Outdoor Ground Solutions AB
                 </span>
